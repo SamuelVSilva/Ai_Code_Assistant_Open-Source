@@ -1,0 +1,16 @@
+app:
+  name: "AI Code Assistant"
+  version: "1.0.0"
+  default_project_path: "~/projects"
+
+ui:
+  theme: "dark"
+  font_size: 12
+  language: "pt_BR"
+  
+ai:
+  default_provider: "openai"
+  
+logging:
+  level: "INFO"
+  file: "logs/app.log"

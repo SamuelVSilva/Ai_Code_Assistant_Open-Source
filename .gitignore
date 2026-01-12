@@ -1,0 +1,18 @@
+# Build and distribution directories
+build/
+build_linux/
+build_windows/
+dist_linux/
+dist_windows/
+temp/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.spec
+
+# OS files
+.DS_Store
+Thumbs.db
