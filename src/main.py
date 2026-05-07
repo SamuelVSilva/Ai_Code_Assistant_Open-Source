@@ -10,10 +10,19 @@ def main():
     try:
         from PyQt6.QtWidgets import QApplication, QMessageBox
     except ImportError as e:
-        # Se falhar o import do PyQt, não temos como mostrar janela, logar em arquivo
+        # Se falhar o import do PyQt, logar e tentar instalar automaticamente
         with open("startup_error.txt", "w") as f:
             f.write(f"Falha ao importar PyQt6: {e}\n{traceback.format_exc()}")
-        return
+        # Tentar instalar automaticamente se pip disponível
+        try:
+            import subprocess
+            print("[Auto-Recovery] Tentando instalar dependências faltantes...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "PyQt6", "requests", "--quiet"])
+            from PyQt6.QtWidgets import QApplication, QMessageBox
+            print("[Auto-Recovery] Dependências instaladas com sucesso!")
+        except Exception as install_err:
+            print(f"ERRO FATAL: PyQt6 não encontrado e instalação falhou.\n{install_err}")
+            return
 
     try:
         # Adicionar raiz do projeto ao PATH se rodando como script
@@ -24,7 +33,7 @@ def main():
                 sys.path.insert(0, root_dir)
 
         app = QApplication(sys.argv)
-        app.setApplicationName("AI Code Assistant")
+        app.setApplicationName("AI Code Assistant — v0.4.11-rev1.2.3-220426")
         app.setOrganizationName("SVS_Technology")
 
         # Importação tardia para garantir que PATH estao configurados

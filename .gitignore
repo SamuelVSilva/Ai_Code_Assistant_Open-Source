@@ -1,18 +1,29 @@
-# Build and distribution directories
-build/
-build_linux/
-build_windows/
-dist_linux/
-dist_windows/
-temp/
-logs/
+# ===== BACKUPS =====
+*.bak
+*.bak-*
+*.tmp
 
-# Python
+# ===== CACHE =====
+.cache/
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+build/
+dist/
 *.spec
+.venv/
 
-# OS files
-.DS_Store
-Thumbs.db
+# ===== LOGS =====
+.env
+*.log
+crash.log
+crash_log.txt
+startup_error.txt
+
+# ===== SCRATCH =====
+scratch/
+
+# ===== IDE =====
+.gemini/
+.vscode/
+.idea/

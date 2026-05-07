@@ -1,0 +1,963 @@
+﻿{
+  "name": "Richie — IA Assistente Base (Rev 1.2.9-Gemini)",
+  "platform": "BotForge Studio",
+  "version": "6.0",
+  "exportedAt": "2026-05-01T08:51:00.117505Z",
+  "cardTypes": {},
+  "ari": {
+    "bot": {
+      "id": "0a6c8de6",
+      "name": "Richie — IA Assistente Base (Rev 1.2.9-Gemini)",
+      "status": "active",
+      "ch": "Chat",
+      "created": "2026-05-01",
+      "cv": 0,
+      "icon": "🤖",
+      "color": "#007acc",
+      "desc": "IA nativa do AI Code Assistant. Chat funcional offline, análise de código multi-linguagem (15+), execução de scripts com permissão, planos de atuação e aprendizado contextual. Desenvolvido por @S.V.S - Try Technology.",
+      "base_provider": "offline",
+      "base_model": "richie-v1",
+      "system_prompt": "Você é Richie, a IA assistente nativa do AI Code Assistant, desenvolvido por @S.V.S - Try Technology. Você é amigável, profissional e direto ao ponto. Suas capacidades incluem: análise de código, suporte multi-linguagem (15+), execução de scripts com permissão, planos de atuação e aprendizado contextual. Você funciona 100% offline sem necessidade de API keys.",
+      "temperature": 0.5,
+      "max_tokens": 4096,
+      "creator_name": "@S.V.S - Try Technology",
+      "tags": [
+        "assistente",
+        "código",
+        "nativa",
+        "base",
+        "offline",
+        "richie",
+        "botforge-native"
+      ]
+    },
+    "flow": {
+      "nodes": [
+        {
+          "id": "c17",
+          "type": "api_connector",
+          "label": "🔌 API Connector",
+          "msg": "",
+          "color": "#4A90E2",
+          "x": -336.0508672566789,
+          "y": -342.2946595941015,
+          "out_labels": [
+            "Conectar",
+            "Configurar"
+          ],
+          "out_colors": [
+            "#2ECC71",
+            "#F39C12"
+          ],
+          "out_keywords": [
+            "",
+            ""
+          ],
+          "system_prompt": "Você é Richie, a IA assistente nativa do AI Code Assistant, desenvolvido por @S.V.S - Try Technology. Você é amigável, profissional e direto ao ponto. Suas capacidades incluem: análise de código, suporte multi-linguagem (15+), execução de scripts com permissão, planos de atuação e aprendizado contextual. Você funciona 100% offline sem necessidade de API keys.",
+          "temperature": 0.5,
+          "max_tokens": 4096,
+          "base_provider": "offline",
+          "base_model": "richie-v1"
+        },
+        {
+          "id": "c16",
+          "type": "volta",
+          "label": "↩️ Voltar ao Chat",
+          "msg": "",
+          "color": "#58a6ff",
+          "x": 1265.9628532612505,
+          "y": -343.2424276659765,
+          "out_labels": [],
+          "out_colors": [
+            "#58a6ff"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c15",
+          "type": "send",
+          "label": "📋 Resultado da Análise",
+          "msg": "",
+          "color": "#3fb950",
+          "x": 1085.9628532612496,
+          "y": -273.24242766597655,
+          "out_labels": [],
+          "out_colors": [
+            "#3fb950"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c14",
+          "type": "reg",
+          "label": "📝 Registrar Aprendizado",
+          "msg": "",
+          "color": "#06b6d4",
+          "x": 1089.0218761237884,
+          "y": -393.2424276659765,
+          "out_labels": [],
+          "out_colors": [
+            "#06b6d4"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c13",
+          "type": "dados",
+          "label": "📊 Plano de Atuação",
+          "msg": "",
+          "color": "#a855f7",
+          "x": 819.021876123789,
+          "y": -443.24242766597655,
+          "out_labels": [
+            "Aprovado"
+          ],
+          "out_colors": [
+            "#22c55e"
+          ],
+          "out_keywords": [
+            ""
+          ]
+        },
+        {
+          "id": "c12",
+          "type": "send",
+          "label": "💬 Resposta Geral",
+          "msg": "",
+          "color": "#58a6ff",
+          "x": 819.021876123789,
+          "y": -343.2424276659765,
+          "out_labels": [],
+          "out_colors": [
+            "#58a6ff"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c11",
+          "type": "send",
+          "label": "⚙️ Configurações",
+          "msg": "",
+          "color": "#78909c",
+          "x": 822.080898986328,
+          "y": -53.24242766597652,
+          "out_labels": [],
+          "out_colors": [
+            "#78909c"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c10",
+          "type": "send",
+          "label": "🧩 Gerenciar BotForge",
+          "msg": "",
+          "color": "#ec4899",
+          "x": 819.021876123789,
+          "y": -123.24242766597652,
+          "out_labels": [],
+          "out_colors": [
+            "#ec4899"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c9",
+          "type": "send",
+          "label": "▶️ Executar Script",
+          "msg": "",
+          "color": "#f97316",
+          "x": 819.021876123789,
+          "y": -193.2424276659765,
+          "out_labels": [],
+          "out_colors": [
+            "#f97316"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c8",
+          "type": "dados",
+          "label": "⚡ Verificar Permissão",
+          "msg": "",
+          "color": "#f97316",
+          "x": 552.080898986328,
+          "y": -163.24242766597652,
+          "out_labels": [
+            "Aprovado",
+            "Negado"
+          ],
+          "out_colors": [
+            "#22c55e",
+            "#ef4444"
+          ],
+          "out_keywords": [
+            "",
+            ""
+          ]
+        },
+        {
+          "id": "c7",
+          "type": "nlp",
+          "label": "🐛 Debug & Correção",
+          "msg": "",
+          "color": "#ef4444",
+          "x": 552.080898986328,
+          "y": -233.2424276659765,
+          "out_labels": [
+            "Corrigido",
+            "Gerar QA",
+            "Versão da IA",
+            "Versão do Programa"
+          ],
+          "out_colors": [
+            "#3fb950",
+            "#a855f7",
+            "#f43f5e",
+            "#10b981"
+          ],
+          "out_keywords": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "system_prompt": "Você é Richie, a IA assistente nativa do AI Code Assistant, desenvolvido por @S.V.S - Try Technology. Você é amigável, profissional e direto ao ponto. Suas capacidades incluem: análise de código, suporte multi-linguagem (15+), execução de scripts com permissão, planos de atuação e aprendizado contextual. Você funciona 100% offline sem necessidade de API keys.",
+          "temperature": 0.5,
+          "max_tokens": 4096,
+          "base_provider": "offline",
+          "base_model": "richie-v1"
+        },
+        {
+          "id": "c6",
+          "type": "send",
+          "label": "📚 Explicar Conceito",
+          "msg": "",
+          "color": "#eab308",
+          "x": 552.080898986328,
+          "y": -303.24242766597655,
+          "out_labels": [],
+          "out_colors": [
+            "#eab308"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c5",
+          "type": "send",
+          "label": "✨ Gerar Código",
+          "msg": "",
+          "color": "#8b5cf6",
+          "x": 552.080898986328,
+          "y": -373.2424276659765,
+          "out_labels": [],
+          "out_colors": [
+            "#8b5cf6"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c4",
+          "type": "nlp",
+          "label": "🔍 Analisar Código",
+          "msg": "",
+          "color": "#06b6d4",
+          "x": 552.080898986328,
+          "y": -443.24242766597655,
+          "out_labels": [
+            "Resultado"
+          ],
+          "out_colors": [
+            "#06b6d4"
+          ],
+          "out_keywords": [
+            ""
+          ],
+          "system_prompt": "Você é Richie, a IA assistente nativa do AI Code Assistant, desenvolvido por @S.V.S - Try Technology. Você é amigável, profissional e direto ao ponto. Suas capacidades incluem: análise de código, suporte multi-linguagem (15+), execução de scripts com permissão, planos de atuação e aprendizado contextual. Você funciona 100% offline sem necessidade de API keys.",
+          "temperature": 0.5,
+          "max_tokens": 4096,
+          "base_provider": "offline",
+          "base_model": "richie-v1"
+        },
+        {
+          "id": "c3",
+          "type": "send",
+          "label": "💬 Saudação Richie",
+          "msg": "",
+          "color": "#22c55e",
+          "x": 552.080898986328,
+          "y": -513.2424276659765,
+          "out_labels": [],
+          "out_colors": [
+            "#22c55e"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c2",
+          "type": "nlp",
+          "label": "🧠 Richie NLP Engine",
+          "msg": "",
+          "color": "#14b8a6",
+          "x": 252.08089898632795,
+          "y": -343.2424276659765,
+          "out_labels": [
+            "Saudação",
+            "Análise de Código",
+            "Gerar Código",
+            "Explicar",
+            "Debug/Erro",
+            "Executar Script",
+            "BotForge",
+            "Configuração",
+            "Pergunta Geral"
+          ],
+          "out_colors": [
+            "#22c55e",
+            "#06b6d4",
+            "#8b5cf6",
+            "#eab308",
+            "#ef4444",
+            "#f97316",
+            "#ec4899",
+            "#78909c",
+            "#58a6ff"
+          ],
+          "out_keywords": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "system_prompt": "Você é Richie, a IA assistente nativa do AI Code Assistant, desenvolvido por @S.V.S - Try Technology. Você é amigável, profissional e direto ao ponto. Suas capacidades incluem: análise de código, suporte multi-linguagem (15+), execução de scripts com permissão, planos de atuação e aprendizado contextual. Você funciona 100% offline sem necessidade de API keys.",
+          "temperature": 0.5,
+          "max_tokens": 4096,
+          "base_provider": "offline",
+          "base_model": "richie-v1"
+        },
+        {
+          "id": "c1",
+          "type": "recv",
+          "label": "📥 Receber Mensagem",
+          "msg": "",
+          "color": "#22c55e",
+          "x": -30.97812387621093,
+          "y": -343.2424276659765,
+          "out_labels": [],
+          "out_colors": [
+            "#22c55e"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c18",
+          "type": "doc_sprint",
+          "label": "📝 Gerar Documento QA",
+          "msg": "",
+          "color": "#9333ea",
+          "x": 552.080898986328,
+          "y": -93.24242766597652,
+          "out_labels": [],
+          "out_colors": [
+            "#9333ea"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c19",
+          "type": "send",
+          "label": "🤖 Identidade IA",
+          "msg": "",
+          "color": "#f43f5e",
+          "x": 552.080898986328,
+          "y": -23.242427665976493,
+          "out_labels": [],
+          "out_colors": [
+            "#f43f5e"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "c20",
+          "type": "send",
+          "label": "💻 Identidade AI Code",
+          "msg": "",
+          "color": "#10b981",
+          "x": 552.080898986328,
+          "y": 43.698549471484284,
+          "out_labels": [],
+          "out_colors": [
+            "#10b981"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n21",
+          "type": "greeting",
+          "label": "Saudação Web",
+          "msg": "Você acessou o Ramo de Desenvolvimento Web. Focado em HTML, CSS, JS, frameworks modernos e arquitetura de internet.",
+          "color": "#22c55e",
+          "x": -785.1162648974783,
+          "y": 251.84411449617085,
+          "out_labels": [],
+          "out_colors": [
+            "#22c55e"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n22",
+          "type": "ctx_an",
+          "label": "Analisar Contexto",
+          "msg": "Análise Heurística de Ambiente:\n1. Avaliar a integridade do projeto lendo `package.json`, `requirements.txt` ou `pom.xml`.\n2. Verificar árvores de diretórios padrão (ex: `src/`, `public/`, `tests/`).\n3. Ao interpretar falhas, procurar por dependências desatualizadas.\n-> Se o projeto estiver vazio ou com configuração ausente, sugira a criação de um boilerplate inicial.",
+          "color": "#8b5cf6",
+          "x": 100,
+          "y": 450,
+          "out_labels": [],
+          "out_colors": [
+            "#8b5cf6"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n23",
+          "type": "file_analysis",
+          "label": "Análise de Documento",
+          "msg": "Processamento e Análise Profunda de Documentos:\n1. Divida arquivos muito longos (acima de 500 linhas) em partes menores para manter o escopo sem alucinações da IA.\n2. Identifique redundâncias de código (ex: funções que fazem a mesma coisa) e blocos silenciosos (como `try...except pass`).\n3. Traceback Rápido: Se houver erros gerados, sempre informe o arquivo exato e a linha, sugerindo a correção lógica em bloco de código unificado.",
+          "color": "#8b5cf6",
+          "x": 300,
+          "y": 450,
+          "out_labels": [],
+          "out_colors": [
+            "#8b5cf6"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n24",
+          "type": "exec_select_string",
+          "label": "Busca Avançada",
+          "msg": "Select-String (Busca Dinâmica PowerShell/Grep):\nUse esta técnica para varredura de dependências e variáveis espalhadas.\nExemplo Prático (Win):\n```powershell\nSelect-String -Path \"C:\\Projeto\\*.py\" -Pattern \"def import_json\" -Context 2,5\n```\nExemplo Prático (Linux):\n```bash\ngrep -rnw '/caminho/projeto/' -e 'import_json'\n```\n-> O contexto acima retorna 2 linhas antes e 5 linhas depois, permitindo analisar blocos de lógica inteiros no terminal.",
+          "color": "#ec4899",
+          "x": 500,
+          "y": 450,
+          "out_labels": [],
+          "out_colors": [
+            "#ec4899"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n25",
+          "type": "exec_route",
+          "label": "Rota de Execução",
+          "msg": "Rota de Execução (Gateway de Segurança):\nSempre avalie as permissões do sistema antes de invocar um terminal:\n- Verifique se é uma máquina Windows (Use PowerShell) ou Linux/Mac (Use Bash).\n- Em execuções complexas que mutam dados (ex: exclusão de banco ou git reset), PARE e pergunte explicitamente: 'Tem certeza que deseja aplicar isso?'.",
+          "color": "#dc2626",
+          "x": 100,
+          "y": 650,
+          "out_labels": [],
+          "out_colors": [
+            "#dc2626"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n26",
+          "type": "exec_powershell",
+          "label": "Rodar PowerShell",
+          "msg": "Ambiente PowerShell (Automação Win):\nComandos essenciais para depuração em Windows:\n1. Monitorar performance:\n```powershell\nGet-Process | Sort-Object CPU -Descending | Select-Object -First 5\n```\n2. Ao receber erros, capture o `$Error[0]` para entender o motivo (falta de permissão, caminho inválido, etc). Trate o erro e ofereça um script PS1 revisado.",
+          "color": "#0ea5e9",
+          "x": 300,
+          "y": 650,
+          "out_labels": [],
+          "out_colors": [
+            "#0ea5e9"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n27",
+          "type": "exec_bash",
+          "label": "Rodar Bash",
+          "msg": "Ambiente Bash (Linux/Unix):\nComandos fundamentais e manipulação:\n1. Limpeza rápida de cache:\n```bash\nfind . -name '__pycache__' -type d -exec rm -r {} +\n```\n2. Ao encontrar 'Permission Denied', explique ao usuário o uso do `chmod +x` ou a necessidade de privilégios. Leia `stderr` de forma isolada se um script Python falhar.",
+          "color": "#f59e0b",
+          "x": 500,
+          "y": 650,
+          "out_labels": [],
+          "out_colors": [
+            "#f59e0b"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n28",
+          "type": "file_backup",
+          "label": "Rotina Backup",
+          "msg": "Rotina de Backup Crítico (File Backup):\nAo aplicar alterações drásticas em arquivos do usuário, crie backups das pastas.\n-> Win (PS):\n```powershell\nCopy-Item -Path \".\\src\" -Destination \".\\src_backup_$(Get-Date -f 'yyyyMMdd_HHmm')\" -Recurse -Force\n```\n-> Linux:\n```bash\ncp -r ./src ./src_backup_$(date +%Y%m%d_%H%M)\n```\nNunca sobrescreva um backup existente sem perguntar.",
+          "color": "#16a34a",
+          "x": 700,
+          "y": 650,
+          "out_labels": [],
+          "out_colors": [
+            "#16a34a"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n29",
+          "type": "detect_lang",
+          "label": "Detectar Linguagem",
+          "msg": "Python, TS, Rust...",
+          "color": "#f59e0b",
+          "x": 100,
+          "y": 850,
+          "out_labels": [],
+          "out_colors": [
+            "#f59e0b"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n30",
+          "type": "ide_create_file",
+          "label": "Criar Arquivo",
+          "msg": "Gerar boilerplate.",
+          "color": "#10b981",
+          "x": 300,
+          "y": 850,
+          "out_labels": [],
+          "out_colors": [
+            "#10b981"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n31",
+          "type": "ide_run_script",
+          "label": "Rodar Script (F5)",
+          "msg": "Testar código criado.",
+          "color": "#db2777",
+          "x": 500,
+          "y": 850,
+          "out_labels": [],
+          "out_colors": [
+            "#db2777"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n32",
+          "type": "nlp_intent",
+          "label": "Intenção NLP",
+          "msg": "Avaliar intenção do usuário.",
+          "color": "#7c3aed",
+          "x": 100,
+          "y": 1050,
+          "out_labels": [],
+          "out_colors": [
+            "#7c3aed"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n33",
+          "type": "sentiment",
+          "label": "Sentimento",
+          "msg": "Positivo, negativo, neutro.",
+          "color": "#ec4899",
+          "x": 300,
+          "y": 1050,
+          "out_labels": [],
+          "out_colors": [
+            "#ec4899"
+          ],
+          "out_keywords": []
+        },
+        {
+          "id": "n34",
+          "type": "identity_ai",
+          "label": "Identidade IA",
+          "msg": "Ajustar personalidade e tom.",
+          "color": "#f43f5e",
+          "x": 500,
+          "y": 1050,
+          "out_labels": [],
+          "out_colors": [
+            "#f43f5e"
+          ],
+          "out_keywords": []
+        }
+      ],
+      "connections": [
+        {
+          "source": "c17",
+          "source_port": "out_0",
+          "target": "c1",
+          "target_port": "in"
+        },
+        {
+          "source": "c15",
+          "source_port": "out",
+          "target": "c16",
+          "target_port": "in"
+        },
+        {
+          "source": "c14",
+          "source_port": "out",
+          "target": "c16",
+          "target_port": "in"
+        },
+        {
+          "source": "c13",
+          "source_port": "out_0",
+          "target": "c9",
+          "target_port": "in"
+        },
+        {
+          "source": "c12",
+          "source_port": "out",
+          "target": "c14",
+          "target_port": "in"
+        },
+        {
+          "source": "c10",
+          "source_port": "out",
+          "target": "c14",
+          "target_port": "in"
+        },
+        {
+          "source": "c9",
+          "source_port": "out",
+          "target": "c15",
+          "target_port": "in"
+        },
+        {
+          "source": "c8",
+          "source_port": "out_1",
+          "target": "c12",
+          "target_port": "in"
+        },
+        {
+          "source": "c8",
+          "source_port": "out_0",
+          "target": "c9",
+          "target_port": "in"
+        },
+        {
+          "source": "c7",
+          "source_port": "out_0",
+          "target": "c15",
+          "target_port": "in"
+        },
+        {
+          "source": "c6",
+          "source_port": "out",
+          "target": "c14",
+          "target_port": "in"
+        },
+        {
+          "source": "c5",
+          "source_port": "out",
+          "target": "c15",
+          "target_port": "in"
+        },
+        {
+          "source": "c4",
+          "source_port": "out_0",
+          "target": "c15",
+          "target_port": "in"
+        },
+        {
+          "source": "c4",
+          "source_port": "out_0",
+          "target": "c13",
+          "target_port": "in"
+        },
+        {
+          "source": "c3",
+          "source_port": "out",
+          "target": "c14",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_8",
+          "target": "c12",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_7",
+          "target": "c11",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_6",
+          "target": "c10",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_5",
+          "target": "c8",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_4",
+          "target": "c7",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_3",
+          "target": "c6",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_2",
+          "target": "c5",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_1",
+          "target": "c4",
+          "target_port": "in"
+        },
+        {
+          "source": "c2",
+          "source_port": "out_0",
+          "target": "c3",
+          "target_port": "in"
+        },
+        {
+          "source": "c1",
+          "source_port": "out",
+          "target": "c2",
+          "target_port": "in"
+        },
+        {
+          "source": "c7",
+          "source_port": "out_1",
+          "target": "c18",
+          "target_port": "in"
+        },
+        {
+          "source": "c18",
+          "source_port": "out",
+          "target": "c15",
+          "target_port": "in"
+        },
+        {
+          "source": "c7",
+          "source_port": "out_2",
+          "target": "c19",
+          "target_port": "in"
+        },
+        {
+          "source": "c7",
+          "source_port": "out_3",
+          "target": "c20",
+          "target_port": "in"
+        },
+        {
+          "source": "n22",
+          "source_port": "out_0",
+          "target": "n23",
+          "target_port": "in"
+        },
+        {
+          "source": "n23",
+          "source_port": "out_0",
+          "target": "n24",
+          "target_port": "in"
+        },
+        {
+          "source": "n25",
+          "source_port": "out_0",
+          "target": "n26",
+          "target_port": "in"
+        },
+        {
+          "source": "n26",
+          "source_port": "out_0",
+          "target": "n27",
+          "target_port": "in"
+        },
+        {
+          "source": "n27",
+          "source_port": "out_0",
+          "target": "n28",
+          "target_port": "in"
+        },
+        {
+          "source": "n29",
+          "source_port": "out_0",
+          "target": "n30",
+          "target_port": "in"
+        },
+        {
+          "source": "n30",
+          "source_port": "out_0",
+          "target": "n31",
+          "target_port": "in"
+        },
+        {
+          "source": "n32",
+          "source_port": "out_0",
+          "target": "n33",
+          "target_port": "in"
+        },
+        {
+          "source": "n33",
+          "source_port": "out_0",
+          "target": "n34",
+          "target_port": "in"
+        },
+        {
+          "source": "n3",
+          "source_port": "out_5",
+          "target": "n22",
+          "target_port": "in"
+        },
+        {
+          "source": "n3",
+          "source_port": "out_6",
+          "target": "n25",
+          "target_port": "in"
+        },
+        {
+          "source": "n3",
+          "source_port": "out_7",
+          "target": "n29",
+          "target_port": "in"
+        },
+        {
+          "source": "n3",
+          "source_port": "out_8",
+          "target": "n32",
+          "target_port": "in"
+        }
+      ],
+      "groups": [
+        {
+          "id": "group_1a9f3956",
+          "title": "Ramo Neural - Desenvolvimento WEB",
+          "color": "#ff5500",
+          "x": -825.1162648974783,
+          "y": 181.84411449617085,
+          "w": 260.0,
+          "h": 170.0,
+          "nodes": [
+            "n21"
+          ]
+        },
+        {
+          "id": "group_3e29b822",
+          "title": "Ramo Neural - Ramo Principal",
+          "color": "#aaff00",
+          "x": -376.0508672566789,
+          "y": -583.2424276659765,
+          "w": 1862.0137205179294,
+          "h": 726.9409771374608,
+          "nodes": [
+            "c14",
+            "c16",
+            "c2",
+            "c10",
+            "c9",
+            "c17",
+            "c13",
+            "c3",
+            "c8",
+            "c20",
+            "c12",
+            "c11",
+            "c7",
+            "c19",
+            "c15",
+            "c1",
+            "c18",
+            "c5",
+            "c6",
+            "c4"
+          ]
+        },
+        {
+          "id": "group_783b66cd",
+          "title": "Ramo Neural - Analise",
+          "color": "#8b5cf6",
+          "x": 50,
+          "y": 400,
+          "w": 700,
+          "h": 150,
+          "nodes": [
+            "n22",
+            "n23",
+            "n24"
+          ]
+        },
+        {
+          "id": "group_03665262",
+          "title": "Ramo Neural - Execucao",
+          "color": "#dc2626",
+          "x": 50,
+          "y": 600,
+          "w": 900,
+          "h": 150,
+          "nodes": [
+            "n25",
+            "n26",
+            "n27",
+            "n28"
+          ]
+        },
+        {
+          "id": "group_540fd812",
+          "title": "Ramo Neural - Especializacao Programacao",
+          "color": "#db2777",
+          "x": 50,
+          "y": 800,
+          "w": 700,
+          "h": 150,
+          "nodes": [
+            "n29",
+            "n30",
+            "n31"
+          ]
+        },
+        {
+          "id": "group_b17ede03",
+          "title": "Ramo Neural - Linguistico",
+          "color": "#f43f5e",
+          "x": 50,
+          "y": 1000,
+          "w": 700,
+          "h": 150,
+          "nodes": [
+            "n32",
+            "n33",
+            "n34"
+          ]
+        }
+      ]
+    },
+    "config": {
+      "botName": "Richie — IA Assistente Base",
+      "version": "v1.4.21 - 01052026",
+      "creator": "@S.V.S - Try Technology",
+      "tone": "profissional e amigável",
+      "propriedade_intelectual": "© 2026 @S.V.S - Try Technology. Todos os direitos reservados.",
+      "data_criacao": "2026-04-14",
+      "data_atualizacao": "2026-04-30"
+    }
+  }
+}
