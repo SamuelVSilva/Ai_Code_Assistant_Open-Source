@@ -98,6 +98,8 @@ A interface evoluiu significativamente desde a primeira versão:
 
 | Versão | Screenshot |
 |--------|-----------|
+| **v0.0.2 (Inicial)** | <img src="https://github.com/user-attachments/assets/5e3c8c2e-bf2a-46b2-a5e4-aff6bebcaeeb" width="400" /> |
+| **v0.1.0** | <img src="https://github.com/user-attachments/assets/10c6d3c1-7f83-43af-89f5-703cd30f7b84" width="400" /> |
 | **v0.3.5-alpha** | ![v0.3.5](interface%20screenshots/interface_v0.3.5.png) |
 | **v0.3.6** | ![v0.3.6](interface%20screenshots/interface_v0.3.6.png) |
 | **v0.4.8** | ![v0.4.8](interface%20screenshots/interface_v0.4.8.png) |
